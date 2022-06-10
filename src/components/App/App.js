@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useState } from 'react';
 import Random from '../Random/Random';
 import FoodInfo from '../FoodInfo/FoodInfo';
-
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Random receipts, 
 // id, title, readyInMinutes, servings, sourceUrl, openLicense, image, imageType, summary
@@ -39,11 +40,11 @@ function App() {
       
       <div className='form'>
         <div className='text-primary'>
-      <button type='submit' onClick={handleOnClick}>Generate Random Recipe</button>
+      <Button type="button"class="btn btn-info" type='submit' onClick={handleOnClick}>Generate Random Recipe</Button>
         </div>
       <form onSubmit={handleSubmit}>
-        <input type='text' name='search' value={search} onChange={handleChange}></input>
-        <button type='submit'>Check Menu Item</button>
+        <input  type='text' name='search' value={search} onChange={handleChange}></input>
+        <Button type="button"class="btn btn-info"  type='submit'>Check Menu Item</Button>
       </form>
 
       </div>
